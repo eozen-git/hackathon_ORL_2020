@@ -31,6 +31,11 @@ class HomeController extends AbstractController
             $result = MuseumApi::SelectByObjectId($objectId);
         }
         $period = $this->controlPeriod($result['objectBeginDate']);
+        $_SESSION['artworks'][] = [
+            'image' => $result['primaryImageSmall'],
+            'artist' => $result['artistDisplayName'],
+            'title' => $result['title'],
+        ];
         return $this->twig->render('Home/index.html.twig', [
             'museum' => $result,
             'period' => $period
