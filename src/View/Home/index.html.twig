@@ -13,59 +13,7 @@
                 <div class="col-3">
                     <div class="row">
                         <h3>Epoque</h3>
-                        {% if museum.objectBeginDate < -5000 %}
-                            <p>
-                                Art Préhistorique
-                            </p>
-                        {% elseif museum.objectBeginDate < 1000 %}
-                            <p>
-                                Première civilisations
-                            </p>
-                        {% elseif museum.objectBeginDate < 1100 %}
-                            <p>
-                                XIeme siècle
-                            </p>
-                        {% elseif museum.objectBeginDate < 1200 %}
-                            <p>
-                                XIIeme siècle
-                            </p>
-                        {% elseif museum.objectBeginDate < 1300 %}
-                            <p>
-                                XIIIeme siècle
-                            </p>
-                        {% elseif museum.objectBeginDate < 1400 %}
-                            <p>
-                                XIVeme siècle
-                            </p>
-                        {% elseif museum.objectBeginDate < 1500 %}
-                            <p>
-                                XVeme siècle
-                            </p>
-                        {% elseif museum.objectBeginDate < 1600 %}
-                            <p>
-                                XVIeme siècle
-                            </p>
-                        {% elseif museum.objectBeginDate < 1700 %}
-                            <p>
-                                XVIIeme siècle
-                            </p>
-                        {% elseif museum.objectBeginDate < 1800 %}
-                            <p>
-                                XVIIIeme siècle
-                            </p>
-                        {% elseif museum.objectBeginDate < 1900 %}
-                            <p>
-                                XIXeme siècle
-                            </p>
-                        {% elseif museum.objectBeginDate < 2000 %}
-                            <p>
-                                XXeme siècle
-                            </p>
-                        {% elseif museum.objectBeginDate < 2100 %}
-                            <p>
-                                XXIeme siècle
-                            </p>
-                        {% endif %}
+                        <p>{{ period }}</p>
                     </div>
                 </div>
                 <div class="col-3">
@@ -83,4 +31,17 @@
             </div>
         </div>
     </div>
+
+    <div class="container-fluid">
+        <div class="col-1 offset-8">
+            <div class="buzz">
+                <a href="/.">
+                    <img src="assets/images/buzzer.png" >
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+
 {% endblock %}
