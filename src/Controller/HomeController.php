@@ -61,7 +61,10 @@ class HomeController extends AbstractController
             'Nairobi' => 184742,
             'Pretoria' => 964137,
             'Abuja' => 2352778,
-            'Rabat' => 2538474
+            'Rabat' => 2538474,
+            'Reykjavik' => 6692263,
+            'Anchorage' => 4282497,
+            'Vancouver' => 5814616,
         ];
 
         $randomCityId = array_rand($cities);
