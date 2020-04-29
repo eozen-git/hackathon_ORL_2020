@@ -8,6 +8,9 @@
 
 namespace App\Controller;
 
+use App\Model\MuseumApi;
+use Symfony\Component\HttpClient\HttpClient;
+
 class HomeController extends AbstractController
 {
 
@@ -21,6 +24,14 @@ class HomeController extends AbstractController
      */
     public function index()
     {
-        return $this->twig->render('Home/index.html.twig');
+        $objectId = rand(1, 500000);
+        $result = MuseumApi::selectByObjectId($objectId);
+        while ($result['primaryImageSmall'] === '') {
+            $objectId = rand(1, 500000);
+            $result = MuseumApi::SelectByObjectId($objectId);
+        }
+
+        return $this->twig->render('Home/index.html.twig', ['museum' => $result]);
     }
+
 }

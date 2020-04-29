@@ -1,0 +1,26 @@
+.container-fluid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h3 {
+    width: 20vw;
+    text-align: center;
+    background-color: var(--color2);
+    padding: 5pt;
+}
+
+p {
+    width: 20vw;
+    text-align: center;
+    background-color: var(--color3);
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+h2, h1, img {
+    text-align: center;
+}
