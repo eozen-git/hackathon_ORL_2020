@@ -10,6 +10,7 @@ namespace App\Controller;
 
 use App\Model\MuseumApi;
 use App\Model\WeatherApi;
+use App\Model\WebcamApi;
 use Symfony\Contracts\HttpClient\Exception\ClientExceptionInterface;
 use Symfony\Contracts\HttpClient\Exception\DecodingExceptionInterface;
 use Symfony\Contracts\HttpClient\Exception\RedirectionExceptionInterface;
@@ -37,9 +38,19 @@ class HomeController extends AbstractController
 
     public function index()
     {
+        $objectId = rand(1, 500000);
+        $result = MuseumApi::selectByObjectId($objectId);
+
+        while ($result['primaryImageSmall'] === '') {
+            $objectId = rand(1, 500000);
+            $result = MuseumApi::SelectByObjectId($objectId);
+        }
+
         $cities = [
             'Paris' => 2968815,
             'London' => 2643743,
+            'Rio de Janeiro' => 3451189,
+            'Santiago' => 3526709,
             'New York City' => 5128581,
             'Los-Angeles' => 5368361,
             'Tokyo' => 1850147,
@@ -50,21 +61,18 @@ class HomeController extends AbstractController
             'Nairobi' => 184742,
             'Pretoria' => 964137,
             'Abuja' => 2352778,
+            'Rabat' => 2538474
         ];
 
-        $objectId = rand(1, 500000);
-        $result = MuseumApi::selectByObjectId($objectId);
-
-        while ($result['primaryImageSmall'] === '') {
-            $objectId = rand(1, 500000);
-            $result = MuseumApi::SelectByObjectId($objectId);
-        }
-
         $randomCityId = array_rand($cities);
-        $weather = WeatherApi::apiConnection($cities[$randomCityId]);
+        $weatherAllData = WeatherApi::apiConnection($cities[$randomCityId]);
+
+        $weatherData['city'] = $weatherAllData['name'];
+        $weatherData['type'] = $weatherAllData['weather'][0]['main'];
+
         return $this->twig->render('Home/index.html.twig', [
             'museum' => $result,
-            'weather' => $weather,
+            'weather' => $weatherData,
         ]);
     }
 }
