@@ -77,5 +77,87 @@ class HomeController extends AbstractController
             'museum' => $result,
             'weather' => $weatherData,
         ]);
+
+        $period = $this->controlPeriod($result['objectBeginDate']);
+        $sylvain = $this->generateRandom();
+        return $this->twig->render('Home/index.html.twig', [
+            'museum' => $result,
+            'period' => $period,
+            'sylvain' => $sylvain
+        ]);
+    }
+
+    /**
+     * Class random
+     *
+     */
+    public function generateRandom(): int
+    {
+        return rand(1, 3);
+    }
+
+    private function controlPeriod($data)
+    {
+        $period = [
+            [
+                'period' => 'Art Préhistorique',
+                'date' => -5000,
+            ],
+            [
+                'period' => 'Premières civilisations',
+                'date' => 1000,
+            ],
+            [
+                'period' => 'XIeme siècle',
+                'date' => 1100,
+            ],
+            [
+                'period' => 'XIIeme siècle',
+                'date' => 1200,
+            ],
+            [
+                'period' => 'XIIIeme siècle',
+                'date' => 1300,
+            ],
+            [
+                'period' => 'XIVeme siècle',
+                'date' => 1400,
+            ],
+            [
+                'period' => 'XVeme siècle',
+                'date' => 1500,
+            ],
+            [
+                'period' => 'XVIeme siècle',
+                'date' => 1600,
+            ],
+            [
+                'period' => 'XVIIeme siècle',
+                'date' => 1700,
+            ],
+            [
+                'period' => 'XVIIIeme siècle',
+                'date' => 1800,
+            ],
+            [
+                'period' => 'XIXeme siècle',
+                'date' => 1900,
+            ],
+            [
+                'period' => 'XXeme siècle',
+                'date' => 2000,
+            ],
+            [
+                'period' => 'XXIeme siècle',
+                'date' => 2100,
+            ],
+        ];
+
+        for ($i = 1, $iMax = count($period); $i < $iMax; $i++) {
+            if ($data >= $period[$i - 1]['date'] && $data < $period[$i]['date']) {
+                return $period[$i]['period'];
+            }
+        }
+        return 'Période non définie';
     }
 }

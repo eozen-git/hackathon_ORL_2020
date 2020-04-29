@@ -3,87 +3,34 @@
 {% block title %} HACKATHON AVRIL 2020{% endblock %}
 
 {% block content %}
-    <div class="row container-fluid my-5">
-        <img class="col-md-8" src="https://fontmeme.com/permalink/200429/1afad37328cfeeb3726dae82656354d9.png"
-             alt="police-retour-vers-le-futur" border="0">
-        <h2 class="col-md-12">La route ? Là où on va on a pas besoin de route !</h2>
-        <div class="col-md-3">
-            <h3 class="mx-auto">Epoque</h3>
-            {% if museum.objectBeginDate < -5000 %}
-                <p class="mx-auto">
-                    Art Préhistorique
-                </p>
-            {% elseif museum.objectBeginDate < 1000 %}
-                <p class="mx-auto">
-                    Première civilisations
-                </p>
-            {% elseif museum.objectBeginDate < 1100 %}
-                <p class="mx-auto">
-                    XIeme siècle
-                </p>
-            {% elseif museum.objectBeginDate < 1200 %}
-                <p class="mx-auto">
-                    XIIeme siècle
-                </p>
-            {% elseif museum.objectBeginDate < 1300 %}
-                <p class="mx-auto">
-                    XIIIeme siècle
-                </p>
-            {% elseif museum.objectBeginDate < 1400 %}
-                <p class="mx-auto">
-                    XIVeme siècle
-                </p>
-            {% elseif museum.objectBeginDate < 1500 %}
-                <p class="mx-auto">
-                    XVeme siècle
-                </p>
-            {% elseif museum.objectBeginDate < 1600 %}
-                <p class="mx-auto">
-                    XVIeme siècle
-                </p>
-            {% elseif museum.objectBeginDate < 1700 %}
-                <p class="mx-auto">
-                    XVIIeme siècle
-                </p>
-            {% elseif museum.objectBeginDate < 1800 %}
-                <p class="mx-auto">
-                    XVIIIeme siècle
-                </p>
-            {% elseif museum.objectBeginDate < 1900 %}
-                <p class="mx-auto">
-                    XIXeme siècle
-                </p>
-            {% elseif museum.objectBeginDate < 2000 %}
-                <p class="mx-auto">
-                    XXeme siècle
-                </p>
-            {% elseif museum.objectBeginDate < 2100 %}
-                <p class="mx-auto">
-                    XXIeme siècle
-                </p>
-            {% endif %}
-        </div>
-        <div class="col-md-3">
-            <h3 class="mx-auto">Année</h3>
-            <p class="mx-auto">{{ museum.objectBeginDate }}<p>
-        </div>
-    </div>
-    <div class="row">
-        <div class="d-flex justify-content-around w-100">
-            <div class="col-md-3 weatherContent">
-                <img class="weatherImage" src="/assets/images/Clear.jpg" alt="clear sky">
-                <img class="weatherImage" src="/assets/images/{{ weather.type }}.jpg" alt="{{ weather.type }}">
-                <img class="windowImage pl-3" src="/assets/images/window.png" alt="window">
-            </div>
-            <div class="col-md-6 tableMuseum">
-                <div class="imageShow">
-                    <img class="shadow" src="{{ museum.primaryImageSmall }}" alt="{{ museum.title }}">
+<div class="row container-fluid my-5">
+    <img class="col-md-8" src="https://fontmeme.com/permalink/200429/1afad37328cfeeb3726dae82656354d9.png"
+         alt="police-retour-vers-le-futur" border="0">
+    <h2>La route ? Là où on va on a pas besoin de route !</h2>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3">
+                <div class="row">
+                    <h3>Epoque</h3>
+                    <p>{{ period }}</p>
                 </div>
             </div>
-            <div class="col-md-3">
-                ABC
+            <div class="col-3">
+                <div class="row">
+                    <h3>Année</h3>
+                    <p>{{ museum.objectBeginDate }}<p>
+                </div>
+                <div class="container-fluid">
+                    <div class="col-1 offset-8">
+                        <div class="buzz">
+                            <a href="/.">
+                                <img src="assets/images/buzzer.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
+</div>
 {% endblock %}
