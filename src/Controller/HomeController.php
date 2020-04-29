@@ -30,8 +30,16 @@ class HomeController extends AbstractController
             $objectId = rand(1, 500000);
             $result = MuseumApi::SelectByObjectId($objectId);
         }
-
-        return $this->twig->render('Home/index.html.twig', ['museum' => $result]);
+        $sylvain = $this->generateRandom();
+        return $this->twig->render('Home/index.html.twig', ['museum' => $result, 'sylvain' => $sylvain]);
     }
 
+    /**
+     * Class random
+     *
+     */
+    public function generateRandom(): int
+    {
+        return rand(1, 3);
+    }
 }
