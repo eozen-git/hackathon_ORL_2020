@@ -34,8 +34,24 @@ class HomeController extends AbstractController
      * @throws RuntimeError
      * @throws SyntaxError
      */
+
     public function index()
     {
+        $cities = [
+            'Paris' => 2968815,
+            'London' => 2643743,
+            'New York City' => 5128581,
+            'Los-Angeles' => 5368361,
+            'Tokyo' => 1850147,
+            'Peking' => 2855016,
+            'Bombay' => 2193111,
+            'Tehran' => 112931,
+            'Cairo' => 360630,
+            'Nairobi' => 184742,
+            'Pretoria' => 964137,
+            'Abuja' => 2352778,
+        ];
+
         $objectId = rand(1, 500000);
         $result = MuseumApi::selectByObjectId($objectId);
 
@@ -44,10 +60,11 @@ class HomeController extends AbstractController
             $result = MuseumApi::SelectByObjectId($objectId);
         }
 
-//        $weather = WeatherApi::apiConnection($result['title']);
+        $randomCityId = array_rand($cities);
+        $weather = WeatherApi::apiConnection($cities[$randomCityId]);
         return $this->twig->render('Home/index.html.twig', [
-            'museum' => $result
-//            'weather' => $weather,
+            'museum' => $result,
+            'weather' => $weather,
         ]);
     }
 }
