@@ -23,7 +23,13 @@ class HomeController extends AbstractController
      */
     public function index()
     {
-        $result = MuseumApi::apiConnection(12556);
+        $objectId = rand(1, 500000);
+        $result = MuseumApi::selectByObjectId($objectId);
+        while ($result['primaryImageSmall'] === '') {
+            $objectId = rand(1, 500000);
+            $result = MuseumApi::SelectByObjectId($objectId);
+        }
+
         return $this->twig->render('Home/index.html.twig', ['museum' => $result]);
     }
 }

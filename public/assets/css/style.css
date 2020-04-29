@@ -12,6 +12,13 @@
 }
 
 body {
+    background-image: url('../images/background.png');
+    background-size: cover;
     font-family: 'Roboto Mono', monospace;
 }
 
+.tableMuseum {
+    background: var(--color3);
+    perspective: 500px;
+    perspective-origin: 20px 70px;
+}
