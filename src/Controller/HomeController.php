@@ -69,7 +69,7 @@ class HomeController extends AbstractController
         $weatherData = [];
         $randomCityId = array_rand($cities);
         $weatherAllData = WeatherApi::apiConnection($cities[$randomCityId]);
-        var_dump($weatherAllData);
+
         $weatherData['city'] = $weatherAllData['name'];
         $weatherData['type'] = $weatherAllData['weather'][0]['main'];
 
