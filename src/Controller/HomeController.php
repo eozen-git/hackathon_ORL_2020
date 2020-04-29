@@ -10,7 +10,6 @@ namespace App\Controller;
 
 use App\Model\MuseumApi;
 use App\Model\WeatherApi;
-use App\Model\WebcamApi;
 use Symfony\Contracts\HttpClient\Exception\ClientExceptionInterface;
 use Symfony\Contracts\HttpClient\Exception\DecodingExceptionInterface;
 use Symfony\Contracts\HttpClient\Exception\RedirectionExceptionInterface;
@@ -19,6 +18,7 @@ use Symfony\Contracts\HttpClient\Exception\TransportExceptionInterface;
 use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
 use Twig\Error\SyntaxError;
+use Symfony\Component\HttpClient\HttpClient;
 
 class HomeController extends AbstractController
 {
