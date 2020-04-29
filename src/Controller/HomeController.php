@@ -9,6 +9,7 @@
 namespace App\Controller;
 
 use App\Model\MuseumApi;
+use App\Model\WeatherApi;
 
 class HomeController extends AbstractController
 {
@@ -24,6 +25,10 @@ class HomeController extends AbstractController
     public function index()
     {
         $result = MuseumApi::apiConnection(12556);
-        return $this->twig->render('Home/index.html.twig', ['museum' => $result]);
+        $weather = WeatherApi::apiConnection($result['title']);
+        return $this->twig->render('Home/index.html.twig', [
+            'museum' => $result,
+            'weather' => $weather,
+        ]);
     }
 }
