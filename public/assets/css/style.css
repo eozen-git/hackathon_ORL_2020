@@ -16,10 +16,7 @@ body {
     font-family: 'Roboto Mono', monospace;
 }
 .tableMuseum {
-    position: absolute;
-    width: 60%;
-    height: 100%;
-    max-height: 500px;
     background: var(--color3);
-    transform: translateX(50%);
+    perspective: 500px;
+    perspective-origin: 20px 70px;
 }
