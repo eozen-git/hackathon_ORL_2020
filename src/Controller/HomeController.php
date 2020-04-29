@@ -74,6 +74,11 @@ class HomeController extends AbstractController
         $weatherData['type'] = $weatherAllData['weather'][0]['main'];
 
         $period = $this->controlPeriod($result['objectBeginDate']);
+        $_SESSION['artworks'][] = [
+            'image' => $result['primaryImageSmall'],
+            'artist' => $result['artistDisplayName'],
+            'title' => $result['title'],
+        ];
         $sylvain = $this->generateRandom();
 
         return $this->twig->render('Home/index.html.twig', [

@@ -44,8 +44,8 @@ body {
 }
 
 .weatherImage {
-    object-fit: cover;
-    width: 100%;
+    object-fit: contain;
+    width: 458px;
     height: 100%;
 }
 
