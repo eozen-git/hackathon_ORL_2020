@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
 }
+
 h3 {
     width: 20vw;
     text-align: center;
@@ -23,4 +24,10 @@ p {
 
 h2, h1, img {
     text-align: center;
+}
+.buzz a:focus {
+    outline: 0;
+}
+.buzz img {
+    width: 100pt;
 }

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,500i,700&display=swap');
 @import "horloge.css";
 
-:root{
+:root {
     /* RGB */
     --color1: rgba(254, 147, 140, 1);
     --color2: rgba(230, 184, 156, 1);
@@ -9,6 +9,10 @@
     --color4: rgba(156, 175, 183, 1);
     --color5: rgba(66, 129, 164, 1);
 
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {
@@ -22,6 +26,27 @@ body {
     justify-content: center;
     align-items: center;
     max-height: 400px;
+}
+
+.weatherContent {
+    position: relative;
+    overflow: hidden;
+    width: 458px;
+    height: 323px;
+}
+
+.weatherContent>* {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.weatherImage {
+    object-fit: contain;
+    width: 458px;
+    height: 100%;
 }
 
 .tableMuseum img {
