@@ -97,11 +97,11 @@ class Data
     }
 
     /**
-     * @return string[]
+     * @return array[]
      */
     public function weather(): array
     {
-        return [
+        $datas = [
             'continents_europa.svg' => [
                 'Paris',
                 'London',
@@ -135,5 +135,6 @@ class Data
                 'Auckland'
             ]
         ];
+        return $datas;
     }
 }

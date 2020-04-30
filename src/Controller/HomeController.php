@@ -66,6 +66,7 @@ class HomeController extends AbstractController
         $sylvain = $this->generateRandom();
 
         $maps = $this->generateMaps($weatherData['city']);
+
         return $this->twig->render('Home/index.html.twig', [
             'museum' => $result,
             'weather' => $weatherData,
@@ -97,13 +98,13 @@ class HomeController extends AbstractController
     }
 
     /**
-     * @param $weatherData
      * @return string
      */
-    private function generateMaps($weatherData): string
+    private function generateMaps(string $weatherData): string
     {
         $datas = new Data();
         $map = $datas->weather();
+
         foreach ($map as $country => $cities) {
             if (in_array($weatherData, $cities, true)) {
                 return $country;
@@ -111,5 +112,4 @@ class HomeController extends AbstractController
         }
         return 'continents.svg';
     }
-
 }
