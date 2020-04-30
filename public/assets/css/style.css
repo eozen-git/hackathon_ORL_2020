@@ -66,7 +66,9 @@ body {
 }
 
 /* FOOTER */
-
+<h1>{
+    margin-bottom: 32px;
+ }
 .footer{
     position: relative;
     height: 200px;
@@ -100,15 +102,29 @@ body {
     position: relative;
 }
 /* ALBUM */
-.card{
+.content_album{
+    width: 100%;
+    line-height: 1;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
-.bloc_card{
+
+.card{
+    margin-top: 32px;
+    max-width: 300px;
+    border-style: none;
+    padding-left: 16px;
     display: flex;
     flex-direction: column;
 }
+.bloc_card{
+    display: flex;
+    flex-direction: row;
+}
 .title_card{
+    color: snow;
+    background-color: #4bb1b1;
     padding-top: -50px;
     font-size: 20px;
     font-weight: 700;
@@ -119,13 +135,14 @@ body {
     flex-direction: row;
 }
 .text_card{
+    text-align: center;
+    border-style: none;
+    border-width: 0;
     background-color: rgba(50,50,50,0.7);
     color: snow;
     font-size: 30px;
     font-weight: 800;
-    margin-left: -50px;
-    padding-top: 50px;
+    margin-left: -48px;
     writing-mode: vertical-rl;
     text-orientation: sideways;
 }
-
