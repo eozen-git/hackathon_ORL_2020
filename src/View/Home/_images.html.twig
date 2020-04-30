@@ -1,19 +1,26 @@
 <div class="container-fluid main-images">
     <div class="d-flex justify-content-around w-100">
         <div class="col-md-3 weatherContent">
-            <span class="weather-text text-center">Une fenêtre sur le temps à {{ weather.city }}</span>
+            <span class="fenetre weather-text text-center">Une fenêtre sur le temps à {{ weather.city }}</span>
             <img class="weatherImage" src="/assets/images/Clear.jpg" alt="clear sky">
             <img class="weatherImage" src="/assets/images/{{ weather.type }}.jpg"
                  alt="{{ weather.type }}">
             <img class="windowImage" src="/assets/images/window.png" alt="window">
         </div>
-        <div class="col-md-6 tableMuseum">
+        <div class="col-md-5 tableMuseum">
             <div class="imageShow">
                 <img class="shadow" src="{{ museum.primaryImageSmall }}" alt="{{ museum.title }}">
             </div>
         </div>
-        <div class="col-3">
-            {% include '/Home/maps.html.twig' %}
+
+        <div class="col-4">
+            <div>
+                {% include 'Home/_cadre.html.twig' %}
+            </div>
+            <div class="shelf col-md-2 d-flex justify-content-center">
+                <img src="assets/images/etagere.png" alt="étagere">
+                <img class="object" src="assets/images/{{ contenent }}" alt="objet">
+            </div>
         </div>
     </div>
 </div>
