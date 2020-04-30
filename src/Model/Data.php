@@ -149,5 +149,4 @@ class Data
             'continents.svg' => 'joconde.jpg'
         ];
     }
-
 }
