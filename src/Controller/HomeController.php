@@ -38,7 +38,7 @@ class HomeController extends AbstractController
 
     public function index()
     {
-        $weatherData=[];
+        $weatherData = [];
 
         $objectId = rand(1, 500000);
         $result = MuseumApi::selectByObjectId($objectId);
@@ -65,48 +65,14 @@ class HomeController extends AbstractController
         ];
         $sylvain = $this->generateRandom();
 
-        $maps = [];
-        if ($weatherData['city'] === 'Paris'
-            || $weatherData['city'] === 'London'
-            || $weatherData['city'] === 'Reykjavik') {
-            $maps['image'] = 'continents_europa.svg';
-        } elseif (
-            $weatherData['city'] === 'Rio de Janeiro'
-            || $weatherData['city'] === 'Santiago') {
-            $maps['image'] = 'continents_south_america.svg';
-        } elseif (
-            $weatherData['city'] === 'New York City'
-            || $weatherData['city'] === 'Los-Angeles'
-            || $weatherData['city'] === 'Anchorage'
-            || $weatherData['city'] === 'Vancouver') {
-            $maps['image'] = 'continents_north_america.svg';
-        } elseif (
-            $weatherData['city'] === 'Tokyo'
-            || $weatherData['city'] === 'Peking'
-            || $weatherData['city'] === 'Bombay'
-            || $weatherData['city'] === 'Tehran') {
-            $maps['image'] = 'continents_asia.svg';
-        } elseif (
-            $weatherData['city'] === 'Cairo'
-            || $weatherData['city'] === 'Nairobi'
-            || $weatherData['city'] === 'Pretoria'
-            || $weatherData['city'] === 'Abuja'
-            || $weatherData['city'] === 'Rabat') {
-            $maps['image'] = 'continents_africa.svg';
-        } elseif (
-            $weatherData['city'] === 'Sydney'
-            || $weatherData['city'] === 'Auckland') {
-            $maps['image'] = 'continents_oceania.svg';
-        } else {
-            $maps['image'] = 'continents.svg';
-        }
+        $maps = $this->generateMaps($weatherData['city']);
 
         return $this->twig->render('Home/index.html.twig', [
             'museum' => $result,
             'weather' => $weatherData,
             'period' => $period,
             'sylvain' => $sylvain,
-            'maps' => $maps,
+            'maps' => $maps
         ]);
     }
 
@@ -129,5 +95,21 @@ class HomeController extends AbstractController
             }
         }
         return 'Période non définie';
+    }
+
+    /**
+     * @return string
+     */
+    private function generateMaps(string $weatherData): string
+    {
+        $datas = new Data();
+        $map = $datas->weather();
+
+        foreach ($map as $country => $cities) {
+            if (in_array($weatherData, $cities, true)) {
+                return $country;
+            }
+        }
+        return 'continents.svg';
     }
 }

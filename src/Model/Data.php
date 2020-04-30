@@ -95,4 +95,46 @@ class Data
             ],
         ];
     }
+
+    /**
+     * @return array[]
+     */
+    public function weather(): array
+    {
+        $datas = [
+            'continents_europa.svg' => [
+                'Paris',
+                'London',
+                'Reykjavik'
+            ],
+            'continents_south_america.svg' => [
+                'Rio de Janeiro',
+                'Santiago'
+            ],
+            'continents_north_america.svg' => [
+                'New York City',
+                'Los-Angeles',
+                'Anchorage',
+                'Vancouver'
+            ],
+            'continents_asia.svg' => [
+                'Tokyo',
+                'Peking',
+                'Bombay',
+                'Tehran'
+            ],
+            'continents_africa.svg' => [
+                'Cairo',
+                'Nairobi',
+                'Pretoria',
+                'Abuja',
+                'Rabat'
+            ],
+            'continents_oceania.svg' => [
+                'Sydney',
+                'Auckland'
+            ]
+        ];
+        return $datas;
+    }
 }
