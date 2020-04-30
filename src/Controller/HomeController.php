@@ -161,8 +161,4 @@ class HomeController extends AbstractController
         }
         return 'Période non définie';
     }
-
-    private function continent()
-    {
-    }
 }
