@@ -8,7 +8,6 @@
     --color3: rgba(234, 210, 172, 1);
     --color4: rgba(156, 175, 183, 1);
     --color5: rgba(66, 129, 164, 1);
-
 }
 
 * {
@@ -16,9 +15,11 @@
 }
 
 body {
-    background-image: url('../images/background.png');
-    background-size: cover;
+    background-color: snow;
     font-family: 'Roboto Mono', monospace;
+}
+.central{
+    height: 500px;
 }
 
 .imageShow {
@@ -54,4 +55,36 @@ body {
     border: 15px ridge var(--color4);
     padding: 3px;
     max-width: 50%;
+}
+/* FOOTER */
+
+.footer{
+    position: relative;
+    height: 200px;
+    background-size: 100%;
+    background-image: url("../images/plynthes.jpg");
+ }
+.sofa{
+    left: 150px;
+    position: absolute;
+    z-index: 50;
+}
+.sofa img{
+    height: 400px;
+}
+.bloc_gueridon{
+    left:1000px;
+    position: relative;
+}
+.dessus{
+    left: 100px;
+    top: 0px;
+    position: absolute;
+}
+.dessus img {
+    height: 50px;
+}
+.dessous{
+
+    position: relative;
 }

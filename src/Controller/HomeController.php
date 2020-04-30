@@ -38,7 +38,7 @@ class HomeController extends AbstractController
 
     public function index()
     {
-        $weatherData=[];
+        $weatherData = [];
 
         $objectId = rand(1, 500000);
         $result = MuseumApi::selectByObjectId($objectId);
