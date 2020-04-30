@@ -38,10 +38,16 @@ class AlbumController extends AbstractController
 
     public function index()
     {
-        if (!isset($_SESSION['artworks'])) {
+        if (isset($_SESSION['artworks'])) {
+            $artworks=[];
+            $artworks=$_SESSION['artworks'];
+            $_SESSION = array();
+            session_destroy();
+            unset($_SESSION);
+
+            return $this->twig->render('Album/index.html.twig', ['artworks'=>$artworks]);
+        } else {
             header('Location: /');
         }
-
-        return $this->twig->render('Album/index.html.twig');
     }
 }
