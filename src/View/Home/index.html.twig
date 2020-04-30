@@ -4,8 +4,8 @@
 
 {% block content %}
     <div class="main">
-        <div class="header d-flex justify-content-around">
-            <div class="row container-fluid my-5">
+        <div class="container-fluid row my-5 d-flex justify-content-around">
+            <div class="col-md-9">
                 <img class="col-md-8" src="https://fontmeme.com/permalink/200429/1afad37328cfeeb3726dae82656354d9.png"
                      alt="police-retour-vers-le-futur" border="0">
                 <h2>La route ? Là où on va on a pas besoin de route !</h2>
@@ -26,9 +26,10 @@
                     </div>
                 </div>
             </div>
-            <img src="assets/images/etagere.png" alt="étagere">
+            <div class="shelf col-md-3 d-flex justify-content-center">
+                <img src="assets/images/etagere.png" alt="étagere">
+            </div>
         </div>
-        {% include '/Home/_shelf.html.twig' %}
         {% include '/Home/_images.html.twig' %}
         {% include '/Home/_footer.html.twig' %}
     </div>
