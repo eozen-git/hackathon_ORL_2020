@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,500i,700&display=swap');
 @import "horloge.css";
+@import "cadre.css";
 
 :root {
     /* RGB */
