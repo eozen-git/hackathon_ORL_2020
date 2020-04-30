@@ -15,6 +15,7 @@ h3 {
     width: 20vw;
     text-align: center;
     background-color: var(--color3);
+    padding: 8px 0;
 }
 
 .row {

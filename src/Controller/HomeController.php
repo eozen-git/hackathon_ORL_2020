@@ -63,7 +63,10 @@ class HomeController extends AbstractController
             'artist' => $result['artistDisplayName'],
             'title' => $result['title'],
         ];
-        $sylvain = $this->generateRandom();
+        $sylvain = rand(1, 3);
+
+        $status = new Data();
+        $contenent = $status->objectContenent();
 
         $maps = $this->generateMaps($weatherData['city']);
 
@@ -72,17 +75,9 @@ class HomeController extends AbstractController
             'weather' => $weatherData,
             'period' => $period,
             'sylvain' => $sylvain,
-            'maps' => $maps
+            'maps' => $maps,
+            'contenent' => $contenent[$maps]
         ]);
-    }
-
-    /**
-     * Class random
-     *
-     */
-    public function generateRandom(): int
-    {
-        return rand(1, 3);
     }
 
     private function controlPeriod($data)

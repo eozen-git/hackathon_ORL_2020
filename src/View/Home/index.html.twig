@@ -20,7 +20,7 @@
                         <div class="col-3">
                             <div class="row">
                                 <h3>Année</h3>
-                                <p>{{ museum.objectBeginDate }}<p>
+                                <p>{{ museum.objectBeginDate }}</p>
                             </div>
                         </div>
                     </div>
@@ -28,6 +28,7 @@
             </div>
             <div class="shelf col-md-3 d-flex justify-content-center">
                 <img src="assets/images/etagere.png" alt="étagere">
+                <img class="object" src="assets/images/{{ contenent }}" alt="objet">
             </div>
         </div>
         {% include '/Home/_images.html.twig' %}

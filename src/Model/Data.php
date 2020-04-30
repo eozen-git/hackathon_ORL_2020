@@ -101,7 +101,7 @@ class Data
      */
     public function weather(): array
     {
-        $datas = [
+        return [
             'continents_europa.svg' => [
                 'Paris',
                 'London',
@@ -135,6 +135,19 @@ class Data
                 'Auckland'
             ]
         ];
-        return $datas;
     }
+
+    public function objectContenent()
+    {
+        return [
+            'continents_europa.svg' => 'europa.png',
+            'continents_south_america.svg' => 'sylvain2.jpeg',
+            'continents_north_america.svg' => 'states.png',
+            'continents_asia.svg' => 'china.png',
+            'continents_africa.svg' => 'africa.png',
+            'continents_oceania.svg' => 'oceanie.png',
+            'continents.svg' => 'joconde.jpg'
+        ];
+    }
+
 }
