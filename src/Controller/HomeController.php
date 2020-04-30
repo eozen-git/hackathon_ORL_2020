@@ -65,11 +65,13 @@ class HomeController extends AbstractController
         ];
         $sylvain = $this->generateRandom();
 
+        $maps = $this->generateMaps($weatherData['city']);
         return $this->twig->render('Home/index.html.twig', [
             'museum' => $result,
             'weather' => $weatherData,
             'period' => $period,
             'sylvain' => $sylvain,
+            'maps' => $maps
         ]);
     }
 
@@ -93,4 +95,21 @@ class HomeController extends AbstractController
         }
         return 'Période non définie';
     }
+
+    /**
+     * @param $weatherData
+     * @return string
+     */
+    private function generateMaps($weatherData): string
+    {
+        $datas = new Data();
+        $map = $datas->weather();
+        foreach ($map as $country => $cities) {
+            if (in_array($weatherData, $cities, true)) {
+                return $country;
+            }
+        }
+        return 'continents.svg';
+    }
+
 }

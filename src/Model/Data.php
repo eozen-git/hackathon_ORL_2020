@@ -30,6 +30,8 @@ class Data
             'Reykjavik' => 6692263,
             'Anchorage' => 4282497,
             'Vancouver' => 5814616,
+            'Sydney' => 2147714,
+            'Auckland' => 2193732,
         ];
     }
 
@@ -91,6 +93,47 @@ class Data
                 'period' => 'XXIeme siècle',
                 'date' => 2100,
             ],
+        ];
+    }
+
+    /**
+     * @return string[]
+     */
+    public function weather(): array
+    {
+        return [
+            'continents_europa.svg' => [
+                'Paris',
+                'London',
+                'Reykjavik'
+            ],
+            'continents_south_america.svg' => [
+                'Rio de Janeiro',
+                'Santiago'
+            ],
+            'continents_north_america.svg' => [
+                'New York City',
+                'Los-Angeles',
+                'Anchorage',
+                'Vancouver'
+            ],
+            'continents_asia.svg' => [
+                'Tokyo',
+                'Peking',
+                'Bombay',
+                'Tehran'
+            ],
+            'continents_africa.svg' => [
+                'Cairo',
+                'Nairobi',
+                'Pretoria',
+                'Abuja',
+                'Rabat'
+            ],
+            'continents_oceania.svg' => [
+                'Sydney',
+                'Auckland'
+            ]
         ];
     }
 }
