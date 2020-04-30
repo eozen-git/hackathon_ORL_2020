@@ -13,7 +13,7 @@ class Data
     {
         return [
             'Paris' => 2968815,
-            'London' => 2643743,
+            'Londres' => 2643743,
             'Rio de Janeiro' => 3451190,
             'Santiago' => 3526709,
             'New York' => 5128581,
@@ -104,7 +104,7 @@ class Data
         return [
             'continents_europa.svg' => [
                 'Paris',
-                'London',
+                'Londres',
                 'Reykjavik'
             ],
             'continents_south_america.svg' => [
@@ -112,19 +112,19 @@ class Data
                 'Santiago'
             ],
             'continents_north_america.svg' => [
-                'New York City',
+                'New York',
                 'Los-Angeles',
                 'Anchorage',
                 'Vancouver'
             ],
             'continents_asia.svg' => [
                 'Tokyo',
-                'Peking',
+                'Pékin',
                 'Bombay',
-                'Tehran'
+                'Tehéran'
             ],
             'continents_africa.svg' => [
-                'Cairo',
+                'Alexandrie',
                 'Nairobi',
                 'Pretoria',
                 'Abuja',
