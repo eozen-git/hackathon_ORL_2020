@@ -66,7 +66,7 @@ class HomeController extends AbstractController
             'Anchorage' => 4282497,
             'Vancouver' => 5814616,
         ];
-        $weatherData = [];
+        $weatherData=[];
         $randomCityId = array_rand($cities);
         $weatherAllData = WeatherApi::apiConnection($cities[$randomCityId]);
 
@@ -85,7 +85,7 @@ class HomeController extends AbstractController
             'museum' => $result,
             'weather' => $weatherData,
             'period' => $period,
-            'sylvain' => $sylvain
+            'sylvain' => $sylvain,
         ]);
     }
 
