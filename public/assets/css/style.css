@@ -106,14 +106,15 @@ h1 {
     position: relative;
     text-align: center;
     display: flex;
+    margin-top: 200pt;
 }
 .shelf img {
-    width: 60%;
+    width: 300pt;
 }
 .shelf .object {
     position: absolute;
     bottom: 18%;
-    width: 25%;
+    width: 100pt;
 }
 
 .dessous{
