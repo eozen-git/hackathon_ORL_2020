@@ -38,7 +38,7 @@ class HomeController extends AbstractController
 
     public function index()
     {
-        $weatherData=[];
+        $weatherData = [];
 
         $objectId = rand(1, 500000);
         $result = MuseumApi::selectByObjectId($objectId);
@@ -51,10 +51,10 @@ class HomeController extends AbstractController
         $dataCities = new Data();
         $cities = $dataCities->cities();
 
-        $randomCityId = array_rand($cities);
-        $weatherAllData = WeatherApi::apiConnection($cities[$randomCityId]);
+        $randomCity = array_rand($cities);
+        $weatherAllData = WeatherApi::apiConnection($cities[$randomCity]);
 
-        $weatherData['city'] = $weatherAllData['name'];
+        $weatherData['city'] = $randomCity;
         $weatherData['type'] = $weatherAllData['weather'][0]['main'];
 
         $period = $this->controlPeriod($result['objectBeginDate']);
@@ -63,23 +63,21 @@ class HomeController extends AbstractController
             'artist' => $result['artistDisplayName'],
             'title' => $result['title'],
         ];
-        $sylvain = $this->generateRandom();
+        $sylvain = rand(1, 3);
+
+        $status = new Data();
+        $contenent = $status->objectContenent();
+
+        $maps = $this->generateMaps($weatherData['city']);
 
         return $this->twig->render('Home/index.html.twig', [
             'museum' => $result,
             'weather' => $weatherData,
             'period' => $period,
             'sylvain' => $sylvain,
+            'maps' => $maps,
+            'contenent' => $contenent[$maps]
         ]);
-    }
-
-    /**
-     * Class random
-     *
-     */
-    public function generateRandom(): int
-    {
-        return rand(1, 3);
     }
 
     private function controlPeriod($data)
@@ -92,5 +90,21 @@ class HomeController extends AbstractController
             }
         }
         return 'Période non définie';
+    }
+
+    /**
+     * @return string
+     */
+    private function generateMaps(string $weatherData): string
+    {
+        $datas = new Data();
+        $map = $datas->weather();
+
+        foreach ($map as $country => $cities) {
+            if (in_array($weatherData, $cities, true)) {
+                return $country;
+            }
+        }
+        return 'continents.svg';
     }
 }

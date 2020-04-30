@@ -11,10 +11,11 @@ h3 {
     padding: 5pt;
 }
 
-p {
+.calendar p {
     width: 20vw;
     text-align: center;
     background-color: var(--color3);
+    padding: 8px 0;
 }
 
 .row {
@@ -25,9 +26,19 @@ p {
 h2, h1, img {
     text-align: center;
 }
-.buzz a:focus {
-    outline: 0;
+.buzz  {
+    font-size: 24px;
 }
-.buzz img {
-    width: 100pt;
+.map{
+    position: absolute;
+    top: -120px;
+    left: -100px;
+}
+.mapsImage {
+    width: 400pt;
+    top: -30px;
+}
+
+.trait {
+    border-right: solid 1px black;
 }

@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,500i,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&display=swap');
 @import "horloge.css";
+@import "cadre.css";
 
 :root {
     /* RGB */
@@ -8,17 +10,25 @@
     --color3: rgba(234, 210, 172, 1);
     --color4: rgba(156, 175, 183, 1);
     --color5: rgba(66, 129, 164, 1);
-
 }
 
 * {
     box-sizing: border-box;
 }
 
+a:focus {
+    outline: 0;
+}
+
 body {
-    background-image: url('../images/background.png');
-    background-size: cover;
+    background-color: snow;
     font-family: 'Roboto Mono', monospace;
+}
+
+.fenetre {
+    font-family: 'Dancing Script', monospace;
+    font-size: 16pt;
+    color: var(--color5);
 }
 
 .imageShow {
@@ -30,7 +40,6 @@ body {
 
 .weatherContent {
     position: relative;
-    overflow: hidden;
     width: 458px;
     height: 323px;
 }
@@ -44,13 +53,195 @@ body {
 }
 
 .weatherImage {
-    object-fit: contain;
+    object-fit: cover;
     width: 458px;
     height: 100%;
 }
 
 .tableMuseum img {
-    height: 400px;
+    max-height: 400px;
     border: 15px ridge var(--color4);
     padding: 3px;
+    max-width: 50%;
+}
+
+
+.main-images {
+    position: relative;
+    height: 500px;
+}
+
+.weather-text {
+    position: absolute;
+    top: -36px;
+    height: 28px;
+}
+
+/* FOOTER */
+
+h1 {
+    margin-bottom: 32px;
+ }
+.footer{
+    position: relative;
+    height: 200px;
+    background-size: 100%;
+    background-image: url("../images/plynthes.jpg");
+ }
+.sofa{
+    top: -10px;
+    left: 200px;
+    position: absolute;
+    z-index: 50;
+}
+.sofa img{
+    height: 400px;
+}
+.bloc_gueridon{
+    left:1000px;
+    position: relative;
+}
+.dessus{
+    left: 60px;
+    top: 15px;
+    position: absolute;
+}
+.dessus img {
+    height: 60px;
+}
+
+.shelf {
+    position: relative;
+    text-align: center;
+    display: flex;
+    margin-top: 120pt;
+    margin-left: 200pt;
+
+}
+.shelf img {
+    width: 200pt;
+}
+.shelf .object {
+    position: absolute;
+    bottom: 18%;
+    width: 120pt;
+}
+
+.dessous{
+    top: 16px;
+    position: relative;
+}
+
+
+/* ALBUM */
+
+.content_album{
+    line-height: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.decouverte{
+    justify-content: space-around;
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.decouverte:nth-child(even){
+    display: flex;
+    flex-direction: row-reverse;
+}
+.ressentis{
+    font-size: 18px;
+    min-width: 450px;
+    max-width: 850px;
+    background-image: url("../images/feuille.jpg");
+    background-color: rgba(190, 161, 129, 0.6);
+    background-size: cover;
+    padding: 16px;
+    margin: 35px;
+}
+.ressentis img{
+    opacity: 0.25;
+    filter: invert(10%);
+}
+.card_image{
+    max-width: 500px;
+    border-style: none;
+    padding-left: 16px;
+    display: flex;
+    flex-direction: column;
+}
+.card_image img{
+    max-width: 600px;
+}
+.bloc_card{
+    width: 100%;
+    display: flex;
+}
+.title_card{
+    display: inline-block;
+    color: snow;
+    background-color: rgba(75, 177, 177, 0.8);
+    padding-top: -50px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.text_card{
+    text-align: center;
+    border-style: none;
+    border-width: 0;
+    background-color: rgba(50,50,50,0.7);
+    color: snow;
+    font-size: 30px;
+    font-weight: 800;
+    margin-left: -48px;
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+}
+.date{
+    width: 95%;
+    text-align: right;
+}
+.tampon{
+    right:30px;
+    position: fixed;
+    top:-0px;
+}
+.tampon img {
+    margin-bottom: 50px;
+    height: 100px;
+    filter: alpha(70%);
+}
+.content-album {
+    padding-top:150px
+}
+.title_album{
+    background-color: snow;
+    width: 100%;
+    justify-content: center;
+    padding-top: 30px;
+    position: fixed;
+}
+.title_album h1{
+    font-weight: 900;
+}
+.back {
+    z-index: 50;
+    position: absolute;
+    top: 25px;
+    left : 25px;
+}
+.center-t{
+    position: relative;
+    width: 100%;
+}
+a{
+    color:#6fbfbf;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+    color:black;
+    transition: 300ms;
 }
