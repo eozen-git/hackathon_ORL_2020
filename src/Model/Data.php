@@ -14,7 +14,7 @@ class Data
         return [
             'Paris' => 2968815,
             'London' => 2643743,
-            'Rio de Janeiro' => 3451189,
+            'Rio de Janeiro' => 3451190,
             'Santiago' => 3526709,
             'New York City' => 5128581,
             'Los-Angeles' => 5368361,
