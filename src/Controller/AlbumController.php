@@ -40,7 +40,6 @@ class AlbumController extends AbstractController
     {
         if (!isset($_SESSION['artworks'])) {
             header('Location: /');
-            exit();
         }
 
         return $this->twig->render('Album/index.html.twig');
