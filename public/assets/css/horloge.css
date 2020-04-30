@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
 }
+
 h3 {
     width: 20vw;
     text-align: center;
@@ -24,7 +25,16 @@ p {
 h2, h1, img {
     text-align: center;
 }
-
+.buzz a:focus {
+    outline: 0;
+}
 .buzz img {
     width: 100pt;
+}
+
+.mapsImage {
+    width: 200pt;
+    background-color: #bfbfbf;
+    border-radius: 10px;
+    border: solid 2px black;
 }
