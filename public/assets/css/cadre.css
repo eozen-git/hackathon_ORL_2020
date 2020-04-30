@@ -4,18 +4,21 @@
 }
 
 .bloc_bilbo img {
-    width: 100%;
+    width: 120pt;
+    height: 160px;
+
 }
 
 .cadre {
     width: 100px;
-    top: -32px;
-    left: -8px;
+    top: -20px;
+    left: -14px;
     position: absolute;
 }
 
 .cadre img{
     height: 200px;
+    width: 150pt;
 }
 
 .photo {

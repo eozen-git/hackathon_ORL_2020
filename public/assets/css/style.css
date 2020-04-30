@@ -107,15 +107,17 @@ h1 {
     position: relative;
     text-align: center;
     display: flex;
-    margin-top: 200pt;
+    margin-top: 120pt;
+    margin-left: 200pt;
+
 }
 .shelf img {
-    width: 300pt;
+    width: 200pt;
 }
 .shelf .object {
     position: absolute;
     bottom: 18%;
-    width: 100pt;
+    width: 120pt;
 }
 
 .dessous{

@@ -141,7 +141,7 @@ class Data
     {
         return [
             'continents_europa.svg' => 'europa.png',
-            'continents_south_america.svg' => 'sylvain2.jpeg',
+            'continents_south_america.svg' => 'buste.png',
             'continents_north_america.svg' => 'states.png',
             'continents_asia.svg' => 'china.png',
             'continents_africa.svg' => 'africa.png',

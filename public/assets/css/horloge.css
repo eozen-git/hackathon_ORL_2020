@@ -41,3 +41,7 @@ h2, h1, img {
     width: 400pt;
     top: -30px;
 }
+
+.trait {
+    border-right: solid 1px black;
+}
