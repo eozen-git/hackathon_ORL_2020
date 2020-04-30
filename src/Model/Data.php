@@ -30,6 +30,8 @@ class Data
             'Reykjavik' => 6692263,
             'Anchorage' => 4282497,
             'Vancouver' => 5814616,
+            'Sydney' => 2147714,
+            'Auckland' => 2193732,
         ];
     }
 
