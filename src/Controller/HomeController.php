@@ -69,35 +69,36 @@ class HomeController extends AbstractController
         if ($weatherData['city'] === 'Paris'
             || $weatherData['city'] === 'London'
             || $weatherData['city'] === 'Reykjavik'){
-            $maps = 'continents_europa.svg';
+            $maps['image'] = 'continents_europa.svg';
         }elseif (
             $weatherData['city'] === 'Rio de Janeiro'
             || $weatherData['city'] === 'Santiago') {
-            $maps = 'continents_south_america.svg';
+            $maps['image'] = 'continents_south_america.svg';
         }elseif (
             $weatherData['city'] === 'New York City'
             || $weatherData['city'] === 'Los-Angeles'
             || $weatherData['city'] === 'Anchorage'
             || $weatherData['city'] === 'Vancouver') {
-            $maps = 'continents_north_america.svg';
+            $maps['image'] = 'continents_north_america.svg';
         }elseif (
             $weatherData['city'] === 'Tokyo'
             || $weatherData['city'] === 'Peking'
             || $weatherData['city'] === 'Bombay'
             || $weatherData['city'] === 'Tehran') {
-            $maps = 'continents_asia.svg';
+            $maps['image'] = 'continents_asia.svg';
         }elseif (
             $weatherData['city'] === 'Cairo'
             || $weatherData['city'] === 'Nairobi'
             || $weatherData['city'] === 'Pretoria'
             || $weatherData['city'] === 'Abuja'
             || $weatherData['city'] === 'Rabat') {
-            $maps = 'continents_africa.svg';
+            $maps['image'] = 'continents_africa.svg';
         }elseif (
             $weatherData['city'] === 'Sydney'
             || $weatherData['city'] === 'Auckland'){
-            $maps = 'continents_oceania.svg';
-        }
+            $maps['image'] = 'continents_oceania.svg';
+        }else
+            $maps['image'] = 'continents.svg';
 
         return $this->twig->render('Home/index.html.twig', [
             'museum' => $result,
