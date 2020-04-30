@@ -26,11 +26,8 @@ h3 {
 h2, h1, img {
     text-align: center;
 }
-.buzz a:focus {
-    outline: 0;
-}
-.buzz img {
-    width: 100pt;
+.buzz  {
+    font-size: 24px;
 }
 .map{
     position: absolute;
@@ -45,3 +42,4 @@ h2, h1, img {
 .trait {
     border-right: solid 1px black;
 }
+

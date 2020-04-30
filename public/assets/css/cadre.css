@@ -6,7 +6,7 @@
 .bloc_bilbo img {
     width: 120pt;
     height: 160px;
-
+    position: relative;
 }
 
 .cadre {
@@ -23,5 +23,9 @@
 
 .photo {
     width: 80px;
-    position: relative;
+}
+
+.art-description {
+    font-family: 'Roboto Mono', monospace;
+    color: var(--color5);
 }
