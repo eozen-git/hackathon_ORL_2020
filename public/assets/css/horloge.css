@@ -31,10 +31,12 @@ h2, h1, img {
 .buzz img {
     width: 100pt;
 }
-
+.map{
+    position: absolute;
+    top: -120px;
+    left: -100px;
+}
 .mapsImage {
-    width: 200pt;
-    background-color: #bfbfbf;
-    border-radius: 10px;
-    border: solid 2px black;
+    width: 250pt;
+    top: -30px;
 }
