@@ -6,7 +6,7 @@
 .bloc_bilbo img {
     width: 120pt;
     height: 160px;
-
+    position: relative;
 }
 
 .cadre {
@@ -23,5 +23,4 @@
 
 .photo {
     width: 80px;
-    position: relative;
 }
