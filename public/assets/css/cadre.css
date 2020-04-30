@@ -1,0 +1,24 @@
+.bloc_bilbo {
+    position: relative;
+    width: 80px;
+}
+
+.bloc_bilbo img {
+    width: 100%;
+}
+
+.cadre {
+    width: 100px;
+    top: -32px;
+    left: -8px;
+    position: absolute;
+}
+
+.cadre img{
+    height: 200px;
+}
+
+.photo {
+    width: 80px;
+    position: relative;
+}
