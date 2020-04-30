@@ -14,6 +14,10 @@
     box-sizing: border-box;
 }
 
+a:focus {
+    outline: 0;
+}
+
 body {
     background-color: snow;
     font-family: 'Roboto Mono', monospace;
@@ -95,6 +99,20 @@ body {
 }
 .dessus img {
     height: 60px;
+}
+
+.shelf {
+    position: relative;
+    text-align: center;
+    display: flex;
+}
+.shelf img {
+    width: 60%;
+}
+.shelf .object {
+    position: absolute;
+    bottom: 18%;
+    width: 25%;
 }
 
 .dessous{
