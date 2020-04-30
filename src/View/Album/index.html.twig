@@ -1,0 +1,26 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %} HACKATHON AVRIL 2020 {% endblock %}
+
+{% block content %}
+<h1>Journal d'un voyage, d'un moment, d'un songe...</h1>
+    <div class="content">
+        {% for artworks in _session['artworks'] %}
+            <div class="card">
+                <div class="bloc_card">
+                    <div class="title_card">
+                        {{ artworks.title }}
+                    </div>
+                    <div class="img_card">
+                        <img src="{{ artworks.image }}">
+                    </div>
+                </div>
+                <div class="text_card">
+                   <p class="artist"> {{ artworks.artist|upper }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    {% include '/Home/_footer.html.twig' %}
+{% endblock %}

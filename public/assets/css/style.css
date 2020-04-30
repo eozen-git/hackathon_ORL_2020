@@ -22,9 +22,6 @@ body {
     background-color: snow;
     font-family: 'Roboto Mono', monospace;
 }
-.central{
-    height: 500px;
-}
 
 .imageShow {
     display: flex;
@@ -35,12 +32,11 @@ body {
 
 .weatherContent {
     position: relative;
-    overflow: hidden;
     width: 458px;
     height: 323px;
 }
 
-.weatherContent>* {
+.weatherContent > * {
     position: absolute;
     left: 0;
     right: 0;
@@ -60,41 +56,95 @@ body {
     padding: 3px;
     max-width: 50%;
 }
+
+
+.main-images {
+    position: relative;
+    height: 500px;
+}
+
+.weather-text {
+    position: absolute;
+    top: -36px;
+    height: 28px;
+}
+
 /* FOOTER */
 
-.footer{
+.footer {
     position: relative;
     height: 200px;
     background-size: 100%;
     background-image: url("../images/plynthes.jpg");
- }
-.sofa{
-    left: 150px;
+}
+
+.sofa {
+    top: -10px;
+    left: 200px;
     position: absolute;
     z-index: 50;
 }
-.sofa img{
+
+.sofa img {
     height: 400px;
 }
-.bloc_gueridon{
-    left:1000px;
+
+.bloc_gueridon {
+    left: 1000px;
     position: relative;
 }
-.dessus{
-    left: 100px;
-    top: 0px;
+
+.dessus {
+    left: 60px;
+    top: 15px;
     position: absolute;
 }
-.dessus img {
-    height: 50px;
-}
-.dessous{
-    position: relative;
-}
+
 .shelf {
     text-align: center;
     display: flex;
 }
+
 .shelf img {
     width: 60%;
+}
+
+.dessous {
+    top: 16px;
+    position: relative;
+}
+
+/* ALBUM */
+.card {
+    display: flex;
+    flex-direction: row;
+}
+
+.bloc_card {
+    display: flex;
+    flex-direction: column;
+}
+
+.title_card {
+    padding-top: -50px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.bloc_text {
+}
+
+.img_card {
+    flex-direction: row;
+}
+
+.text_card {
+    background-color: rgba(50, 50, 50, 0.7);
+    color: snow;
+    font-size: 30px;
+    font-weight: 800;
+    margin-left: -50px;
+    padding-top: 50px;
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
 }
