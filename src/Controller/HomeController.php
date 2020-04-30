@@ -51,10 +51,10 @@ class HomeController extends AbstractController
         $dataCities = new Data();
         $cities = $dataCities->cities();
 
-        $randomCityId = array_rand($cities);
-        $weatherAllData = WeatherApi::apiConnection($cities[$randomCityId]);
+        $randomCity = array_rand($cities);
+        $weatherAllData = WeatherApi::apiConnection($cities[$randomCity]);
 
-        $weatherData['city'] = $weatherAllData['name'];
+        $weatherData['city'] = $randomCity;
         $weatherData['type'] = $weatherAllData['weather'][0]['main'];
 
         $period = $this->controlPeriod($result['objectBeginDate']);
