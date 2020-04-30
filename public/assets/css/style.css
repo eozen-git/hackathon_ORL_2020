@@ -131,38 +131,61 @@ h1 {
     top: 16px;
     position: relative;
 }
+
+
 /* ALBUM */
+
 .content_album{
-    width: 100%;
     line-height: 1;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
-
-.card{
-    margin-top: 32px;
-    max-width: 300px;
+.decouverte{
+    justify-content: space-around;
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.decouverte:nth-child(even){
+    display: flex;
+    flex-direction: row-reverse;
+}
+.ressentis{
+    font-size: 18px;
+    min-width: 450px;
+    max-width: 850px;
+    background-image: url("../images/feuille.jpg");
+    background-color: rgba(190, 161, 129, 0.6);
+    background-size: cover;
+    padding: 16px;
+    margin: 35px;
+}
+.ressentis img{
+    opacity: 0.25;
+    filter: invert(10%);
+}
+.card_image{
+    max-width: 500px;
     border-style: none;
     padding-left: 16px;
     display: flex;
     flex-direction: column;
 }
+.card_image img{
+    max-width: 600px;
+}
 .bloc_card{
+    width: 100%;
     display: flex;
-    flex-direction: row;
 }
 .title_card{
+    display: inline-block;
     color: snow;
-    background-color: #4bb1b1;
+    background-color: rgba(75, 177, 177, 0.8);
     padding-top: -50px;
     font-size: 20px;
     font-weight: 700;
-}
-.bloc_text{
-}
-.img_card{
-    flex-direction: row;
 }
 .text_card{
     text-align: center;
@@ -175,4 +198,50 @@ h1 {
     margin-left: -48px;
     writing-mode: vertical-rl;
     text-orientation: sideways;
+}
+.date{
+    width: 95%;
+    text-align: right;
+}
+.tampon{
+    right:30px;
+    position: fixed;
+    top:-0px;
+}
+.tampon img {
+    margin-bottom: 50px;
+    height: 100px;
+    filter: alpha(70%);
+}
+.content-album {
+    padding-top:150px
+}
+.title_album{
+    background-color: snow;
+    width: 100%;
+    justify-content: center;
+    padding-top: 30px;
+    position: fixed;
+}
+.title_album h1{
+    font-weight: 900;
+}
+.back {
+    z-index: 50;
+    position: absolute;
+    top: 25px;
+    left : 25px;
+}
+.center-t{
+    position: relative;
+    width: 100%;
+}
+a{
+    color:#6fbfbf;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+    color:black;
+    transition: 300ms;
 }

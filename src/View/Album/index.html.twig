@@ -3,23 +3,31 @@
 {% block title %} HACKATHON AVRIL 2020 {% endblock %}
 
 {% block content %}
-<h1>Journal d'un voyage, d'un moment, d'un songe...</h1>
+    <div class="title_album"><div class="back"><a href="/">RETOUR </a></div><div class="center-t"><h1>Journal d'un voyage, d'un moment, d'un songe...</h1></div>    <div>
+            <div class="date">le : {{ "now"|date("d/m/Y") }}</div>
+            <div class="date">à : ... </div>
+        </div>
+    </div>
+    <div class="tampon"><img src="/assets/images/stamp.png"></div>
+
     <div class="content-album">
         {% for artworks in _session['artworks'] %}
-            <div class="card">
-                <div class="title_card">
-                    {{ artworks.title }}
-                </div>
-                <div class="bloc_card">
-                    <div class="img_card">
-                        <img src="{{ artworks.image }}">
+            <div class="decouverte">
+                <div class="card_image">
+                    <div class="title_card">
+                        {{ artworks.title }}
                     </div>
-                    <div class="text_card">
-                        {{ artworks.artist|upper }}
+                    <div class="bloc_card">
+                        <div class="img_card">
+                            <img src="{{ artworks.image }}">
+                        </div>
+                        <div class="text_card">
+                            {{ artworks.artist|upper }}
+                        </div>
                     </div>
                 </div>
+                <div class="ressentis">Qu'avez-vous ressentis ?<br> Où étiez-vous ?<br> Profitez de ce moment pour explorer vos sentiments, et pourquoi pas... écrire, dessiner... ou pas...<br><br><img src="/assets/images/buste.png"> </div>
             </div>
         {% endfor %}
     </div>
-    {% include '/Home/_footer.html.twig' %}
 {% endblock %}
