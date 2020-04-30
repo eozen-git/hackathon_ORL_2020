@@ -66,17 +66,12 @@ class HomeController extends AbstractController
             'Anchorage' => 4282497,
             'Vancouver' => 5814616,
         ];
-
+        $weatherData=[];
         $randomCityId = array_rand($cities);
         $weatherAllData = WeatherApi::apiConnection($cities[$randomCityId]);
 
         $weatherData['city'] = $weatherAllData['name'];
         $weatherData['type'] = $weatherAllData['weather'][0]['main'];
-
-        return $this->twig->render('Home/index.html.twig', [
-            'museum' => $result,
-            'weather' => $weatherData,
-        ]);
 
         $period = $this->controlPeriod($result['objectBeginDate']);
         $_SESSION['artworks'][] = [
@@ -88,7 +83,8 @@ class HomeController extends AbstractController
         return $this->twig->render('Home/index.html.twig', [
             'museum' => $result,
             'period' => $period,
-            'sylvain' => $sylvain
+            'sylvain' => $sylvain,
+            'weather' => $weatherData,
         ]);
     }
 
