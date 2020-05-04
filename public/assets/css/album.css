@@ -1,0 +1,123 @@
+/* ALBUM */
+
+.content-album{
+    width: 100%;
+}
+.decouverte{
+    justify-content: space-around;
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.decouverte:nth-child(even){
+    display: flex;
+    flex-direction: row-reverse;
+}
+.ressentis{
+    font-size: 18px;
+    min-width: 450px;
+    max-width: 850px;
+    background-image: url("../images/feuille.jpg");
+    background-size: cover;
+    padding: 16px;
+    margin: 35px;
+}
+.ressentis img{
+    width: 350px;
+    opacity: 0.25;
+    filter: invert(20%);
+}
+.card_image{
+    max-width: 500px;
+    border-style: none;
+    padding-left: 16px;
+    display: flex;
+    flex-direction: column;
+}
+.card_image img{
+    max-width: 600px;
+}
+.bloc_card{
+    width: 100%;
+    display: flex;
+}
+.title_card{
+    display: inline-block;
+    color: snow;
+    background-color: rgba(75, 177, 177, 0.8);
+    padding-top: -50px;
+    font-size: 20px;
+    font-weight: 700;
+}
+.text_card{
+    text-align: center;
+    border-style: none;
+    border-width: 0;
+    background-color: rgba(50,50,50,0.7);
+    color: snow;
+    font-size: 30px;
+    font-weight: 800;
+    margin-left: -48px;
+    writing-mode: vertical-rl;
+    text-orientation: sideways;
+}
+.date{
+    width: 95%;
+    text-align: right;
+}
+.tampon{
+    z-index: 50;
+    right:30px;
+    position: fixed;
+    top:30px;
+}
+
+.content-album {
+    padding-top:150px
+}
+.tampon img {
+    margin-bottom: 50px;
+    height: 100px;
+}
+.back{
+     font-family: 'Mansalva', cursive;
+ }
+.title_album{
+    margin: 0;
+    width: 100%;
+    z-index: 20;
+    background-color: snow;
+    justify-content: center;
+    position: fixed;
+}
+.title_album>*{
+    margin-bottom: 16px;
+    margin-top: 16px;
+}
+.title_album h1{
+    font-weight: 900;
+    font-size: 28px;
+}
+.center-t{
+    margin: auto;
+    text-align: center;
+}
+.saisie{
+    width: 90%;
+    position: absolute;
+    left: 25px;
+    top: 170px;
+    z-index: 10;
+    border-style: solid;
+    border-color: var(--color4);
+    border-width: 1px;
+    border-radius: 2px;
+}
+.saisie textarea{
+    z-index: 11;
+    color: #b11a1f;
+    font-family: 'Mansalva', cursive;
+    width: 100%;
+    background-color: rgba(0,0,0,0);
+
+}

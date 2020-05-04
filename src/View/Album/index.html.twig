@@ -1,19 +1,29 @@
 {% extends 'layout.html.twig' %}
 
-{% block title %} HACKATHON AVRIL 2020 {% endblock %}
+{% block title %} HACKATHON AVRIL 2020 - Voyage immobile {% endblock %}
 
+{% block stylesheet %}
+    <link rel="stylesheet" href="/assets/css/album.css">
+{% endblock %}
 {% block content %}
-    <div class="title_album"><div class="back"><a href="/">RETOUR </a></div><div class="center-t"><h1>Journal d'un voyage, d'un moment, d'un songe...</h1></div>    <div>
+    <div class="title_album row">
+        <div class="back col-1">
+            <a href="/">RETOUR </a>
+        </div>
+        <div class="center-t col-8">
+            <h1>Journal d'un voyage, d'un moment, d'un songe...</h1>
+        </div>
+        <div class="col-2">
             <div class="date">le : {{ "now"|date("d/m/Y") }}</div>
-            <div class="date">à : ... </div>
         </div>
     </div>
-    <div class="tampon"><img src="/assets/images/stamp.png"></div>
-
+    <div class="tampon">
+        <img src="/assets/images/stamp.png">
+    </div>
     <div class="content-album">
         {% for artworks in _session['artworks'] %}
-            <div class="decouverte">
-                <div class="card_image">
+            <div class="decouverte col-12">
+                <div class="card_image col-8">
                     <div class="title_card">
                         {{ artworks.title }}
                     </div>
@@ -26,7 +36,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="ressentis">Qu'avez-vous ressenti ?<br> Où étiez-vous ?<br> Profitez de ce moment pour explorer vos sentiments, et pourquoi pas... écrire, dessiner... ou pas...<br><br><img src="/assets/images/buste.png"> </div>
+                <div class="ressentis col-4">
+                    <div class="saisie">
+                        <textarea rows="10"></textarea>
+                    </div>
+                    Qu'avez-vous ressenti ?<br>
+                    Où étiez-vous ?<br>
+                    Profitez de ce moment pour explorer vos sentiments, et pourquoi pas... écrire, dessiner... ou pas...<br>
+                    <br>
+                    <img src="/assets/images/buste.png">
+                </div>
             </div>
         {% endfor %}
     </div>
