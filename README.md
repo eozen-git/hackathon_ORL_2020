@@ -1,4 +1,4 @@
-# Simple MVC
+# HACKATHON ORL 2020
 
 ## Description
 
@@ -6,15 +6,19 @@ This repository is built on a simple PHP MVC structure.
 
 It uses some cool vendors/libraries such as Twig and Grumphp.
 
-## API  
+## APIs
 
 This project was carried out as part of a 24-hour hackathon. Two APIs were made available. 
 
-Windy API (webcams from around the world)
-https://api.windy.com/
+Windy API (webcams from around the world)  
+  https://api.windy.com/
 
-Metropolitan Museum of Art's API (art collections)
-https://metmuseum.github.io/
+Metropolitan Museum of Art's API (art collections)  
+  https://metmuseum.github.io/
+
+## Travel
+
+In this period of confinement, visitors had to travel by discovering works from prehistory to the present day among some 400,000 proposals or through the world's cameras offering breathtaking landscapes.
 
 
 ### Check on Travis
