@@ -2,7 +2,7 @@
 
 ## Description
 
-Ce projet a été réalisé pendant un hackhathon de 24h. Le site a pour thème "Voyager depuis son canapé". Nous avons choisi grâce à une API, en cliquant sur un bouton sur la page, de présenter une œuvre artistique prise au hasard dans la collection du muséum de New York. Selon son origine géographique et la période de sa création, le décor autour du canapé est modifié.
+Ce projet a été réalisé pendant un hackhathon de 24h. Le site a pour thème "Voyager depuis son canapé". Grâce à une API, en cliquant sur un bouton dédié sur la page d'accueil, une œuvre artistique issue de la collection du muséum de New York vous est présentée. Selon son origine géographique et la période de sa création, le décor autour du canapé est modifié.
 
 Grâce à une seconde API nous avons représenté la météo actuelle d'une ville prise au hasard sur le continent d'origine de l’œuvre, à travers une fenêtre dans laquelle s'affiche une image correspondante (temps orageux, grand soleil etc..).
 
