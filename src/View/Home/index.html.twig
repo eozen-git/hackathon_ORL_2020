@@ -1,41 +1,20 @@
 {% extends 'layout.html.twig' %}
 
-{% block title %} HACKATHON AVRIL 2020 {% endblock %}
+{% block title %} Voyager de chez soi {% endblock %}
 
 {% block content %}
     <div class="main">
-        <div class="container-fluid row my-5 d-flex justify-content-around">
-            <div class="col-md-5">
-                <div class="container-fluid">
-                    <img class="col-md-8" src="https://fontmeme.com/permalink/200429/1afad37328cfeeb3726dae82656354d9.png"
-                         alt="police-retour-vers-le-futur" border="0">
-                </div>
-
-                <h2 class="my-4">La route ? Là où on va on a pas besoin de route !</h2>
-                <div class="en-tete calendar container-fluid">
-                    <div class="row">
-                        <div class="col-6">
-                            <div class="row">
-                                <h3 class="trait">Epoque</h3>
-                                <p class="trait">{{ period }}</p>
-                            </div>
-                        </div>
-
-                        <div class="col-6">
-                            <div class="row">
-                                <h3>Année</h3>
-                                <p>{{ museum.objectBeginDate }}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="calendar row col-6 offset-3">
+            <div class="col-calendar column col-6">
+                <h3 class="trait">Epoque</h3>
+                <p class="trait">{{ period }}</p>
             </div>
-            <div class="col-2">
-                {% include '/Home/maps.html.twig' %}
+            <div class="col-calendar column col-6">
+                <h3 class="trait">Année</h3>
+                <p class="trait">{{ museum.objectBeginDate }}</p>
             </div>
         </div>
         {% include '/Home/_images.html.twig' %}
         {% include '/Home/_footer.html.twig' %}
     </div>
-
 {% endblock %}

@@ -1,24 +1,32 @@
 <div class="container-fluid main-images">
     <div class="d-flex justify-content-around w-100">
-        <div class="col-md-3 weatherContent">
-            <span class="fenetre weather-text text-center">Une fenêtre sur le temps à {{ weather.city }}</span>
-            <img class="weatherImage" src="/assets/images/Clear.jpg" alt="clear sky">
-            <img class="weatherImage" src="/assets/images/{{ weather.type }}.jpg"
-                 alt="{{ weather.type }}">
-            <img class="windowImage" src="/assets/images/window.png" alt="window">
+        <div class="col-md-3 weather">
+            <div class="weatherContent">
+                <img class="weatherImage" src="/assets/images/Clear.jpg" alt="clear sky">
+                <img class="weatherImage" src="/assets/images/{{ weather.type }}.jpg" alt="{{ weather.type }}">
+                <img class="windowImage" src="/assets/images/window.png" alt="window">
+            </div>
+            <div class="arrow"><img src="assets/images/arrow-red.png"></div>
+            <div class="weather-text text-center">
+                <span>Pendant ce temps,<br> à {{ weather.city }}</span>
+            </div>
         </div>
         <div class="col-md-5 tableMuseum">
             <div class="imageShow">
-                <img class="shadow" src="{{ museum.primaryImageSmall }}" alt="{{ museum.title }}">
+                <div><img class="shadow" src="{{ museum.primaryImageSmall }}" alt="{{ museum.title }}"></div>
+                <div><span>{{ museum.title }}</span>
+                <span>{{ museum.artisteDisplayName }}</span></div>
             </div>
         </div>
-
         <div class="col-4">
             <div>
                 {% include 'Home/_cadre.html.twig' %}
             </div>
-            <div class="shelf d-flex justify-content-center">
-                <img src="assets/images/etagere.png" alt="étagere">
+            <div>
+                {% include 'Home/_maps.html.twig' %}
+            </div>
+            <div class="bloc_shelf">
+                <img class="shelf" src="assets/images/etagere.png" alt="étagere">
                 <img class="object" src="assets/images/{{ contenent }}" alt="objet">
             </div>
         </div>

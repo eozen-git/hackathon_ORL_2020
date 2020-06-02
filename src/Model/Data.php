@@ -140,10 +140,10 @@ class Data
     public function objectContenent()
     {
         return [
-            'continents_europa.svg' => 'europa.png',
+            'continents_europa.svg' => 'biblot_europe.png',
             'continents_south_america.svg' => 'buste.png',
             'continents_north_america.svg' => 'states.png',
-            'continents_asia.svg' => 'china.png',
+            'continents_asia.svg' => 'biblot_asie.png',
             'continents_africa.svg' => 'africa.png',
             'continents_oceania.svg' => 'oceanie.png',
             'continents.svg' => 'joconde.jpg'
