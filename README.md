@@ -2,36 +2,16 @@
 
 ## Description
 
-This repository is built on a simple PHP MVC structure.  
+Ce projet a été réalisé pendant un hackhathon de 24h. Le site a pour thème "Voyager depuis son canapé". Nous avons choisi grâce à une API, en cliquant sur un bouton sur la page, de présenter une œuvre artistique prise au hasard dans la collection du muséum de New York. Selon son origine géographique et la période de sa création, le décor autour du canapé est modifié.
 
-It uses some cool vendors/libraries such as Twig and Grumphp.
+Grâce à une seconde API nous avons représenté la météo actuelle d'une ville prise au hasard sur le continent d'origine de l’œuvre, à travers une fenêtre dans laquelle s'affiche une image correspondante (temps orageux, grand soleil etc..).
+
+Une deuxième page répertorie l'ensemble des œuvres parcourues depuis votre arrivée sur le site sous forme de journal de voyage.
 
 ## APIs
 
-This project was carried out as part of a 24-hour hackathon. Two APIs were made available. 
-
-Windy API (webcams from around the world)  
-  https://api.windy.com/
+Open Weather (current weather in any location around the world)  
+  https://openweathermap.org/
 
 Metropolitan Museum of Art's API (art collections)  
   https://metmuseum.github.io/
-
-## Travel
-
-In this period of confinement, visitors had to travel by discovering works from prehistory to the present day among some 400,000 proposals or through the world's cameras offering breathtaking landscapes.
-
-
-### Check on Travis
-
-1. Go on [https://travis-ci.com](https://travis-ci.com).
-2. Sign up if you don't have account,
-3. Look for your project in search bar on the left,
-4. As soon as your repository have a `.travis.yml` in root folder, Travis should detect it and run test.
-5. Configure Travis as described in the screenshot below, this is needed to avoid performance issues.
-
-> You can watch this screenshot to see minimum mandatory configuration : ![basic config](http://images.innoveduc.fr/symfony4/travis-config.png)
-
-
-
-## Police BTTF
-https://fontmeme.com/fr/police-retour-vers-le-futur/
